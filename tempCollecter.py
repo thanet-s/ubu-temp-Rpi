@@ -17,7 +17,7 @@ def senddata(data):
 while True:
     time.sleep(1)
     dt = datetime.datetime.now()
-    if (dt.minute % 2) == 0 :
+    if (dt.minute % 5) == 0 :
         humidity, temperature = DHT.read_retry(11, 8)
         if len(updateOneData) == 0:
             if humidity is not None and temperature is not None:
